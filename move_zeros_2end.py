@@ -2,9 +2,9 @@
 preserving the order of the other elements.'''
 
 def move_zeros(array):
-    L = [item for item in array if str(item) != '0' and str(item) != '0.0' or item == '0']
+    L = [item for item in array if type(item) == bool or item != 0]
     for i in array:
-        if type(i) != str and str(i) == '0' or str(i) == '0.0':
+        if type(i) != bool and i ==0:
             L.append(i)
     return L
 
