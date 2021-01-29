@@ -3,7 +3,7 @@ and have to return the highest and lowest number. """
 
 def high_and_low(numbers): 
     ints = [int(n) for n in numbers.split(' ')]
-    return " ".join((str(max(ints)),str(min(ints))))
+    return "%s %s" %(max(ints),min(ints))
 
 
 a = high_and_low("1 2 3 4 5")  # return "5 1"
