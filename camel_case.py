@@ -9,6 +9,5 @@ def to_camel_case(text):
         else w.title() for w in re.split('-|_',text))
 
 
-print(to_camel_case("the-stealth-warrior"))
-
-print(to_camel_case("The-Stealth-Warrior"))
+print(to_camel_case("the-stealth-warrior")) #theStealthWarrior
+print(to_camel_case("The-Stealth-Warrior")) #TheStealthWarrior
