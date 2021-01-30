@@ -11,3 +11,5 @@ def to_camel_case(text):
 
 print(to_camel_case("the-stealth-warrior")) #theStealthWarrior
 print(to_camel_case("The-Stealth-Warrior")) #TheStealthWarrior
+print(to_camel_case("le_temes_a_la_oscuridad")) #TheStealthWarrior
+print(to_camel_case("LE_TEMES_A_LA_OSCURIDAD")) #TheStealthWarrior
