@@ -20,9 +20,8 @@ Note: n and p will always be given as strictly positive integers.
 '''
 
 def dig_pow(n, p):
-    if sum(pow(int(j),p+i) for i,j in enumerate(str(n))) % n == 0:
-        return sum(pow(int(j),p+i) for i,j in enumerate(str(n)))/n
-    return -1
+    s = sum(pow(int(j),p+i) for i,j in enumerate(str(n))) 
+    return s/n if s%n == 0 else -1
 
 print(dig_pow(89, 1)) #returns 1
 print(dig_pow(92, 1)) #returns -1
