@@ -7,14 +7,23 @@ Notes:
     Performance needs to be considered
 '''
 
-def scramble(s1, s2):
-    for i in s2:
-        try:
-            s1.index(i)
-            s1 = s1.replace(i,'',1)
-        except:
-            return False
-    return  True
+#Using loop, slower
+#def scramble(s1, s2):
+#    for i in s2:
+#        if i in s1:
+#            s1 = s1.replace(i,'',1)
+#        else:
+#            return False
+#    return  True
+
+
+#faster 
+from collections import Counter
+def scramble(s1,s2):
+    # Counter basically creates a dictionary of counts and letters
+    # Using set subtraction, we know that if anything is left over,
+    # something exists in s2 that doesn't exist in s1
+    return len(Counter(s2)- Counter(s1)) == 0
 
 
 print(scramble('rkqodlw', 'world'),  True)
